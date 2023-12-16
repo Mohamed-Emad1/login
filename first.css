@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  background-image: url('images/ba2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+.login {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  margin: 40px auto;
+  height: 300px;
+  text-align: center;
+  position: relative;
+  
+}
+.login .head {
+  background-color: #10735f;
+  margin-top: -57px;
+  padding: -25px;
+  height: 27%;
+  position: absolute;
+  left: 100px;
+  top: 57px;
+  width: 70%;
+  opacity: 0.86;
+}
+.login .head h1 {
+  color: white;
+}
+
+.login .btn button{
+  padding: 20px 60px;
+  color: white;
+  background-color: #10735f;
+  font-weight: bold;
+  box-shadow: 5px 10px 8px white;
+  margin-right: 15px;
+}
+
+.login .btn a:hover button{
+  cursor: pointer;
+  transition: 0.8s;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
+  background-color: #09a2d0;
+}
+
+

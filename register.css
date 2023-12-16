@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body{
+  /* background-image: url('images/ba2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.5; */
+     margin: 0;
+    padding: 0; /* Remove any default padding */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+body::before{
+    content: '';
+    position: absolute;
+    background-image: url('images/ba2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.83;
+    top: -40px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.login{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    margin: 40px auto;
+    height: 440px;
+    text-align: center;
+    position: relative;
+    
+}
+.login .head{
+            background-color: #10735f;
+            margin-top: -57px;
+            padding: -25px;
+            height: 21%;
+            position: absolute;
+            left: 50px;
+            top: 57px;
+            width: 75%;
+            border-radius: 2% ;
+            -webkit-border-radius: 2% ;
+            -moz-border-radius: 2% ;
+            -ms-border-radius: 2% ;
+            -o-border-radius: 2% ;
+            opacity: 0.9;
+}
+.login .head h1{
+    color: white;
+}
+
+.login .inputs .inp1 input{
+    margin-top:162px;
+    height: 40px;
+    width: 60%;
+    border:2px solid black;
+    border-left: none;
+    border-radius: 2% ;
+            -webkit-border-radius: 2% ;
+            -moz-border-radius: 2% ;
+            -ms-border-radius: 2% ;
+            -o-border-radius: 2% ;
+}
+.login .inputs .inp2 input{
+    margin-top:30px;
+    height: 40px;
+     width: 60%;
+    border:2px solid black;
+    border-left: none;
+    border-radius: 2% ;
+            -webkit-border-radius: 2% ;
+            -moz-border-radius: 2% ;
+            -ms-border-radius: 2% ;
+            -o-border-radius: 2% ;
+}
+.login .inputs .inp3 input{
+    margin-top:30px;
+    height: 40px;
+     width: 60%;
+    border:2px solid black;
+    border-left: none;
+    border-radius: 2% ;
+            -webkit-border-radius: 2% ;
+            -moz-border-radius: 2% ;
+            -ms-border-radius: 2% ;
+            -o-border-radius: 2% ;
+}
+.login .inputs .inp4 input{
+    margin-top:30px;
+    height: 40px;
+     width: 60%;
+    border:2px solid black;
+    border-left: none;
+    border-radius: 2% ;
+            -webkit-border-radius: 2% ;
+            -moz-border-radius: 2% ;
+            -ms-border-radius: 2% ;
+            -o-border-radius: 2% ;
+}
+
+.login .inputs .inp1 .icon {
+    position: absolute;
+    left: 114px;
+    top: 103px;
+    background-color: #10735f;
+    padding: 11px 13px 11px 13px;
+    color: white;
+}
+.login .inputs .inp2 .icon {
+    position: absolute;
+    left: 114px;
+    top: 172px;
+
+    background-color: #10735f;
+    padding: 11px 13px 11px 13px;
+    color: white;
+}
+.login .inputs .inp3 .icon {
+    position: absolute;
+    left: 114px;
+    top: 243px;
+    background-color: #10735f;
+    padding: 11px 13px 11px 13px;
+    color: white;
+}
+.login .inputs .inp4 .icon {
+    position: absolute;
+    left: 114px;
+    top: 313px;
+    background-color: #10735f;
+    padding: 11px 13px 11px 13px;
+    color: white;
+}
+
+.login button{
+    padding: 15px 30px 15px 30px;
+    background-color: #10735f;
+    margin-top: 15px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 5px 8px 8px #eee;
+}
+.login button:hover{
+    cursor: pointer;
+    transition: 0.8s;
+    background-color: #0db7ea;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+}
+
+.login .text{
+    margin: 30px auto;
+    color: rgb(0, 0, 0);
+    width: 40%;
+    font-weight: 600;
+    font-size: 20px;
+}
+.login .text a{
+    color: rgb(26, 2, 161);
+}
+.login .text a:hover{
+    transition: 1s;
+    color: rgba(1, 164, 193, 0.989);
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}

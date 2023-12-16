@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="icons/all.min.css">
+</head>
+<body>
+        <div class="login">
+            <div class="head">
+
+                <h1>Register</h1>
+            </div>
+
+            <form action="db.php" onsubmit="return check()" method="POST">
+                <div class="inputs">
+                <div class="inp1">
+                    <div class="icon">
+                        <i class="fa fa-solid fa-user"></i>
+                    </div>
+                    <input type="text" id="user" placeholder="UserName" name="username"/>
+                </div>
+                <div class="inp2">
+                    <div class="icon">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <input type="email" name="email" id="email" placeholder="Enter your email"/>
+                </div>
+                <div class="inp3">
+                    <div class="icon">
+                        <i class="fa fa-solid fa-lock"></i>
+                    </div>
+                    <input type="password" name="password" id="pass" placeholder="Enter your password"/>
+                </div>
+                <div class="inp4">
+                    <div class="icon">
+                        <i class="fa fa-solid fa-lock"></i>
+                    </div>
+                    <input type="password" name="confirmPassword" id="confirmpass" placeholder="Confirm password"/>
+                </div>
+                
+            </div>
+            <button type="submit" name="register">register</button>
+            </form>
+
+            <div class="text">
+                Already have an account? <a href="login.html">log in</a>
+            </div>
+    </div>
+    </div>
+
+    <script>
+        function check() {
+        let username= document.getElementById("user").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("pass").value;
+        let confirmpass = document.getElementById("confirmpass").value;
+        
+        if (username === "") {
+          alert("Please enter your username!");
+          return false;
+        }
+
+        if (email === "") {
+          alert("Please enter your email!");
+          return false;
+        }
+        if (password === "") {
+          alert("Please enter your password!");
+          return false;
+        }
+        if (confirmpass === "") {
+            alert("Please enter your Confirmed password!");
+            return false;
+        }
+        if(confirmpass !== "" && password !== ""){
+            if(password !== confirmpass){
+                alert("Your password is and confirmed passwords are different");
+                return false;
+            }
+        }
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid email address!");
+          return false;
+        } 
+        
+        regExpr_username =/^[A-Za-z\s]+$/;
+         if (!regExpr_username.test(username)) {
+          alert("letters only allowed in username!");
+          return false
+         }
+
+        if (password.length < 6) {
+            alert("Password should be at least 6 characters long!");
+            return false;
+        }
+    
+        
+        return true;
+    }
+    </script>
+</body>
+</html>

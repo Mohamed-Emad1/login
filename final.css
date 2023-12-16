@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+body{
+  background-image: url('images/welcome.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.name{
+    display: flex;
+    color: white;
+    font-size: 80px;
+    font-family: cursive;
+    justify-content: center;
+    margin-top: 18%;
+}
+.name .n{
+    color: rgb(7, 238, 99);
+    margin-left: 8px;
+}

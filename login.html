@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log-in Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="icons/all.min.css">
+
+    
+  </head>
+  <body>
+    <div class="login">
+      <div class="head">
+        <h1>Login</h1>
+      </div>
+      <form action="db.php" onsubmit="return check()" method="POST">
+        <div class="inputs">
+          <div class="inp1">
+            <div class="icon">
+              <i class="fa fa-solid fa-user"></i>
+            </div>
+            <input type="email" name="email" id="em" placeholder="Enter your email"/>
+          </div>
+          <div class="inp2">
+            <div class="icon">
+              <i class="fa fa-solid fa-lock"></i>
+            </div>
+            <input type="password" name="pass" id="password" placeholder="Enter your password" />
+          </div>
+        </div>
+
+        <div class="button">
+          <button type="submit" name="submit">Login</button>
+        </div>
+        <div class="register">
+          <a href="register.html">First time? Register</a>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function check() {
+        let email = document.getElementById("em").value;
+        let password = document.getElementById("password").value;
+        if (email === "") {
+          alert("Please enter your email!");
+          return false;
+        }
+        if (password === "") {
+          alert("Please enter your password!");
+          return false;
+        }
+
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid email address!");
+          return false;
+        }    
+        
+        if (password.length < 6) {
+          alert("Password should be at least 6 characters long!");
+          return false;
+        }   
+
+        return true;
+      }
+    </script>
+  </body>
+</html>
